@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+
+        <div class="grid shadow m-lg-auto col-4" style="width: 18rem;" *ngFor="let i of ProductArray">
+            <div class="card-header">
+                <h2> {{i.name}}</h2>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title text-lg">Brand : {{ i.brand }}</h5>
+
+                <h4 class="card-text">Stock : {{ i.countInStock }}</h4>
+                <h3 class="mb-4">Price : {{ i.price }}</h3>
+                <button routerLink="/UpdateProduct/{{i._id}}" (click)="OnEdit(i)" style="margin-right: 10px;">Edit</button>
+                <button (click)="OnDelete(i._id)">Delete</button>
+            </div>
+        </div>
+        &nbsp;&nbsp;
+    </div>
+</div>

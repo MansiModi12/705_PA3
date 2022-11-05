@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">Edit Product</div>
+        <div class="card-body">
+        <form name="productInputForm" #productInputForm="ngForm" (ngSubmit)="OnSubmit()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter Name" [(ngModel)]="Product.name"
+                    name="name" #name="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="brand">Brand</label>
+                <input type="text" class="form-control" id="brand" placeholder="Enter Brand" [(ngModel)]="Product.brand"
+                    name="brand" #brand="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" class="form-control" id="price" placeholder="Enter price"
+                    [(ngModel)]="Product.price" name="price" #price="ngModel">
+            </div>
+            <div class="form-group">
+                <label for="stock">Stock</label>
+                <input style="margin-bottom: 10px;" type="number" class="form-control" id="stock" placeholder="Enter stock"
+                    [(ngModel)]="Product.countInStock" name="countInStock" #countInStock="ngModel">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
